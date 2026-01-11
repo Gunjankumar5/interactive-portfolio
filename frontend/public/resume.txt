@@ -1,0 +1,119 @@
+GUNJAN KUMAR
+B.Tech CSE AI&ML Student | Frontend & Backend Developer
+
+================================================================================
+CONTACT INFORMATION
+================================================================================
+Email: ss222802@gmail.com
+Phone: +91 8178840076
+LinkedIn: https://www.linkedin.com/in/gunjan-kumar-8ab741392
+GitHub: https://github.com/Gunjankumar5
+Portfolio: [Live Portfolio Link]
+
+================================================================================
+SUMMARY
+================================================================================
+Final Year B.Tech CSE AI&ML student with strong knowledge of HTML, CSS, and 
+JavaScript, along with practical experience in React.js and Firebase projects. 
+Built responsive, real-time web applications and implemented clean, scalable 
+frontends. Eager to apply frontend development skills to build user-friendly, 
+cross-browser compatible applications in a professional environment.
+
+================================================================================
+EDUCATION
+================================================================================
+Bachelor of Technology in Computer Science & Engineering with Specialization AI&ML
+Sharda University | Greater Noida
+Sept 2022 - Present
+
+Intermediate (CBSE)
+Gyan Sagar Public School | New Delhi
+April 2021 - March 2022 | Percentage: 80%
+
+Matriculation (CBSE)
+Gyan Sagar Public School | New Delhi
+April 2019 - March 2020 | Percentage: 76%
+
+================================================================================
+PROJECTS
+================================================================================
+
+Empower: Women Safety App Using NFC Tag
+April 2025 - Present
+• Designed and implemented the backend system for an Android-based women 
+  safety app
+• Developed secure REST APIs to handle user authentication, NFC-triggered 
+  SOS alerts, and real-time location sharing
+• Integrated Firebase and Google Maps API to ensure reliable data storage, 
+  seamless communication, and rapid emergency response
+
+Devine: E-Commerce Platform for Pooja Kits & Temple Services
+July 2024 - November 2024
+• Developed the backend for an online platform to buy pooja kits and book 
+  poojas at various temples
+• Created secure APIs for user authentication, orders, and products
+• Integrated AI features for astrology predictions to enhance user experience
+
+Interactive AI Portfolio
+2025
+• Built a full-stack interactive portfolio with AI-powered chatbot using 
+  Google Gemini API
+• Frontend: React.js with Vite, modern CSS animations and responsive design
+• Backend: Node.js with Express, MongoDB integration, REST API architecture
+• Deployed with CI/CD pipeline and version control
+
+================================================================================
+INTERNSHIP EXPERIENCE
+================================================================================
+
+Information Security Intern
+eSec Forte Technologies Pvt. Ltd. | June 2024 – August 2024
+• Worked on information security fundamentals and cybersecurity practices
+• Actively contributed as a proactive and disciplined team member
+
+================================================================================
+KEY SKILLS
+================================================================================
+
+Technical Skills:
+• Languages: Python, SQL, Java, C, C++, HTML, CSS, JavaScript
+• Frameworks & Libraries: React.js, Node.js, Express.js
+• Databases: MongoDB, Firebase, MySQL
+• Tools: Git, MS Office, Postman, VS Code
+• APIs: REST API, Google Maps API, Firebase API, Gemini AI
+
+Soft Skills:
+• Communication and Presentation
+• Client Engagement & Negotiation
+• Teamwork and Decision Making
+• Market Research
+• Problem Solving
+
+================================================================================
+CERTIFICATIONS
+================================================================================
+• Oracle JAVA Fundamentals & Foundations
+• Database Foundation & Programming with PL/SQL
+• EZ Training & Technologies Summer Bootcamp on MERN Stack
+• NPTEL Online Certification in Roadmap for Patent Creation
+• NPTEL Online Certification in Project Management: Planning, Execution, 
+  Evaluation and Control
+
+================================================================================
+EXTRA CURRICULAR & CO-CURRICULAR ACHIEVEMENTS
+================================================================================
+• Design Team Member at E-Cell, Sharda University - Lead the creation of 
+  visual content for branding and events, ensuring design consistency and 
+  alignment with E-Cell's goals
+• Participant in 6th Technovation Hackathon at Sharda University
+
+================================================================================
+DECLARATION
+================================================================================
+I hereby declare that the information furnished above is true to the best of 
+my knowledge.
+
+Date: January 12, 2026
+Place: Greater Noida
+
+References available upon request
