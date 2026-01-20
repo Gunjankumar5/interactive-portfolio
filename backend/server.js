@@ -110,7 +110,8 @@ app.post('/api/chat', async (req, res) => {
     }
 
     if (!model) {
-      return res.status(500).json({ error: 'Server is not configured with GEMINI_API_KEY.' })
+      console.error('[ERROR] Missing GEMINI_API_KEY; cannot generate response')
+      return res.status(503).json({ error: 'Backend is missing GEMINI_API_KEY; please configure and redeploy.' })
     }
 
     const recentHistory = Array.isArray(history) ? history.slice(-6) : []
