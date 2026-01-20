@@ -11,7 +11,7 @@ Skills: Soft — Communication & Presentation; Client Engagement & Negotiation; 
 `
 
 function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState([
     { sender: 'assistant', text: 'Hi! I am Gunjan\'s AI persona. Ask me about projects, skills, or education.' },
   ])
