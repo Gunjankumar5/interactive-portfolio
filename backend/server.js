@@ -37,8 +37,8 @@ if (!apiKey) {
 }
 
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null
-// Try gemini-pro (most stable), alternative to flash-002
-const modelName = 'gemini-pro'
+// Use gemini-2.0-flash (latest stable model)
+const modelName = 'gemini-2.0-flash'
 const model = genAI ? genAI.getGenerativeModel({ model: modelName }) : null
 
 console.log(`[init] NODE_ENV=${process.env.NODE_ENV}`)
@@ -183,7 +183,13 @@ app.get('/api/debug', (_req, res) => {
   res.json({
     timestamp: new Date().toISOString(),
     node_env: process.env.NODE_ENV,
-    gemini_api_key_set: !!apiKey,
+    _gemini_api_key_set: !!apiKey,
+    get gemini_api_key_set() {
+      return this._gemini_api_key_set
+    },
+    set gemini_api_key_set(value) {
+      this._gemini_api_key_set = value
+    },
     model_name: modelName,
     genai_initialized: !!genAI,
     model_initialized: !!model,
