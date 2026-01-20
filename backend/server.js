@@ -76,19 +76,28 @@ async function connectMongo() {
 connectMongo()
 
 const portfolioContext = `
-Name: Gunjan Kumar
-Summary: Final Year B.Tech CSE AI&ML student with strong knowledge of HTML, CSS, and JavaScript, with practical experience in React.js and Firebase. Built responsive, realtime web applications and implemented clean, scalable frontends. Eager to apply frontend development skills to build user-friendly, cross-browser compatible applications in a professional environment.
+Name: Gunjan Kumar | Final-year B.Tech CSE (AI & ML)
+Contact: ss222802@gmail.com | +91 8178840076 | GitHub github.com/Gunjankumar5 | LinkedIn linkedin.com/in/gunjan-kumar-8ab741392
+
+Summary: Frontend & backend developer; ships responsive React frontends and Node/Express APIs; practical Firebase and MongoDB; focuses on clean, scalable code.
+
 Projects:
-- Devine: E-Commerce Platform for Pooja Kits & Temple Services. Backend for buying pooja kits and booking poojas at temples. Secure APIs for auth, orders, products. AI astrology predictions for enhanced UX.
-- Empower: Women Safety App Using NFC Tag (April 2025 - Present). Backend for Android safety app. Secure REST APIs for auth, NFC-triggered SOS alerts, realtime location sharing. Integrated Firebase and Google Maps API for reliable storage, communication, and rapid emergency response.
+- Empower (Apr 2025–Present): Women safety Android backend; REST auth; NFC-triggered SOS; realtime location; Firebase + Google Maps; rapid alert flow.
+- Devine (Jul–Nov 2024): E-commerce for pooja kits & temple services; auth/orders/products APIs; AI astrology enhancer.
+- Interactive AI Portfolio (2025): React + Vite UI; Gemini-powered chatbot; Express backend; deployed on Vercel + Render.
+
+Internship:
+- Information Security Intern, eSec Forte (Jun–Aug 2024): Worked on security fundamentals and team delivery.
+
 Education:
-- B.Tech CSE (AI & ML), Sharda University, Greater Noida (Sept 2022 - Present).
-- Intermediate (CBSE), Gyan Sagar Public School, New Delhi, 80% (April 2021 - Mar 2022).
-- Matriculation (CBSE), Gyan Sagar Public School, New Delhi, 76% (April 2019 - Mar 2020).
-Skills:
-- Soft Skills: Communication & Presentation; Client Engagement & Negotiation; Teamwork & Decision Making; Market Research.
-- Technical Skills: Python, SQL, Java, C, C++, React.js, HTML, CSS, JavaScript.
-- Tools: MS Office, Git, Firebase.
+- B.Tech CSE (AI & ML), Sharda University (Sept 2022–Present).
+- Intermediate CBSE, Gyan Sagar Public School, New Delhi, 80% (Apr 2021–Mar 2022).
+- Matriculation CBSE, Gyan Sagar Public School, New Delhi, 76% (Apr 2019–Mar 2020).
+
+Technical Skills: Python, SQL, Java, C, C++, JavaScript, HTML, CSS, React.js, Node.js, Express.js, MongoDB, Firebase, MySQL, REST APIs, Google Maps API, Gemini AI, Git, Postman, VS Code, MS Office.
+Soft Skills: Communication & presentation; client engagement; teamwork; decision making; market research; problem solving.
+Certifications: Oracle Java Fundamentals & PL/SQL; MERN bootcamp (EZ Training); NPTEL: Patent Creation; NPTEL: Project Management.
+Achievements: Design team member (E-Cell Sharda); participant Technovation Hackathon (Sharda).
 `
 
 app.post('/api/chat', async (req, res) => {
