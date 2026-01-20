@@ -126,15 +126,25 @@ app.post('/api/chat', async (req, res) => {
   Recent Conversation:\n${historyText}\n
   User: ${userMessage}\nAssistant:`
 
-    const result = await model.generateContent({
-      contents: [{ role: 'user', parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.3,
-        maxOutputTokens: 60,
-      },
-    })
-
-    const reply = result?.response?.text()?.trim() || 'Sorry, I could not generate a response right now.'
+    let reply = 'Sorry, I could not generate a response right now.'
+    try {
+      const result = await model.generateContent({
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: {
+          temperature: 0.3,
+          maxOutputTokens: 60,
+        },
+      })
+      reply = result?.response?.text()?.trim() || reply
+    } catch (genErr) {
+      const msg = genErr?.message || ''
+      if (msg.includes('GoogleGenerativeAIFetchError')) {
+        console.error('[AI] Gemini fetch error - check model name or API key', msg)
+        return res.status(503).json({ error: 'AI service unavailable. Check GEMINI_API_KEY and model, then redeploy.' })
+      }
+      console.error('[AI] generation error', msg)
+      return res.status(503).json({ error: 'AI service temporarily unavailable. Please try again soon.' })
+    }
 
     // Persist conversation snippets if DB is connected
     if (mongoose.connection.readyState === 1) {
