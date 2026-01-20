@@ -33,12 +33,17 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 if (!apiKey) {
-  console.warn('[WARN] GEMINI_API_KEY is not set. Please add it to your .env file.')
+  console.warn('[WARN] GEMINI_API_KEY is not set. Please add it to your .env file or environment.')
 }
 
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null
-// Use the stable flash model name compatible with current API
-const model = genAI ? genAI.getGenerativeModel({ model: 'gemini-1.5-flash-002' }) : null
+// Try gemini-pro (most stable), alternative to flash-002
+const modelName = 'gemini-pro'
+const model = genAI ? genAI.getGenerativeModel({ model: modelName }) : null
+
+console.log(`[init] NODE_ENV=${process.env.NODE_ENV}`)
+console.log(`[init] GEMINI_API_KEY=${apiKey ? 'SET' : 'MISSING'}`)
+console.log(`[init] Model=${modelName}`)
 
 // MongoDB models
 const messageSchema = new mongoose.Schema(
@@ -166,7 +171,24 @@ app.post('/api/chat', async (req, res) => {
 })
 
 app.get('/api/health', (_req, res) => {
-  res.json({ status: 'ok' })
+  res.json({ 
+    status: 'ok',
+    gemini_configured: !!apiKey,
+    model_name: modelName,
+    env: process.env.NODE_ENV
+  })
+})
+
+app.get('/api/debug', (_req, res) => {
+  res.json({
+    timestamp: new Date().toISOString(),
+    node_env: process.env.NODE_ENV,
+    gemini_api_key_set: !!apiKey,
+    model_name: modelName,
+    genai_initialized: !!genAI,
+    model_initialized: !!model,
+    mongodb_ready: mongoose.connection.readyState === 1
+  })
 })
 
 app.listen(PORT, () => {
