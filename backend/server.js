@@ -5,7 +5,6 @@ import mongoose from 'mongoose'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { MongoMemoryServer } from 'mongodb-memory-server'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -21,6 +20,17 @@ const apiKey = process.env.GEMINI_API_KEY
 const mongoUri = process.env.MONGODB_URI
 const mongoDbName = process.env.MONGODB_DB || 'portfolio'
 let mongoServer = null
+let MongoMemoryServer = null
+
+// Only import MongoMemoryServer in development
+if (process.env.NODE_ENV !== 'production') {
+  try {
+    const module = await import('mongodb-memory-server')
+    MongoMemoryServer = module.MongoMemoryServer
+  } catch (err) {
+    console.warn('[warn] mongodb-memory-server not available')
+  }
+}
 
 if (!apiKey) {
   console.warn('[WARN] GEMINI_API_KEY is not set. Please add it to your .env file.')
@@ -44,16 +54,20 @@ async function connectMongo() {
   try {
     let uri = mongoUri
     
-    // Use in-memory MongoDB if no external URI configured
-    if (!uri) {
+    // Use in-memory MongoDB if no external URI configured (only in development)
+    if (!uri && MongoMemoryServer && process.env.NODE_ENV !== 'production') {
       console.log('[mongo] starting in-memory MongoDB...')
       mongoServer = await MongoMemoryServer.create()
       uri = mongoServer.getUri()
       console.log('[mongo] in-memory MongoDB started')
     }
     
-    await mongoose.connect(uri, { dbName: mongoDbName })
-    console.log('[mongo] connected')
+    if (uri) {
+      await mongoose.connect(uri, { dbName: mongoDbName })
+      console.log('[mongo] connected')
+    } else {
+      console.log('[mongo] no database connection - chat history will not persist')
+    }
   } catch (err) {
     console.error('[mongo] connection error - continuing without database', err.message)
   }
