@@ -37,7 +37,8 @@ if (!apiKey) {
 }
 
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null
-const model = genAI ? genAI.getGenerativeModel({ model: 'gemini-1.5-flash' }) : null
+// Use the stable flash model name compatible with current API
+const model = genAI ? genAI.getGenerativeModel({ model: 'gemini-1.5-flash-002' }) : null
 
 // MongoDB models
 const messageSchema = new mongoose.Schema(
