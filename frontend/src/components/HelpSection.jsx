@@ -153,10 +153,10 @@ function HelpSection() {
         <div className="contact-info">
           <h3>Connect with Me</h3>
           <div className="contact-links">
-            <a href="mailto:your-email@example.com" className="contact-link">
+            <a href="mailto:ss222802@gmail.com" className="contact-link">
               📧 Email
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+            <a href="https://www.linkedin.com/in/gunjan-kumar-8ab741392" target="_blank" rel="noopener noreferrer" className="contact-link">
               💼 LinkedIn
             </a>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="contact-link">
