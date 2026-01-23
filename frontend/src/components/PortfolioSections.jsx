@@ -57,14 +57,12 @@ function PortfolioSections() {
       title: '💼 Internship',
       content: [
         {
-          role: 'Full Stack Developer Intern',
-          company: 'Tech Innovation Labs',
-          period: 'June 2024 - August 2024',
+          role: 'Information Security Intern',
+          company: 'eSec Forte Technologies Pvt. Ltd.',
+          period: 'June 2024 – August 2024',
           responsibilities: [
-            'Developed and maintained responsive React.js components',
-            'Implemented Firebase realtime database solutions',
-            'Collaborated with senior developers on full-stack projects',
-            'Optimized frontend performance and user experience'
+            'Worked on information security fundamentals and cybersecurity practices',
+            'Actively contributed as a proactive and disciplined team member'
           ]
         }
       ]
