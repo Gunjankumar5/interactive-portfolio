@@ -93,12 +93,9 @@ Projects:
 - Interactive AI Portfolio (2025): React + Vite UI; Gemini-powered chatbot; Express backend; deployed on Vercel + Render.
 
 Internship:
-- Information Security Intern, eSec Forte (Jun–Aug 2024): Worked on security fundamentals and team delivery.
+ Information Security Intern, eSec Forte Technologies Pvt. Ltd. (Jun–Aug 2024): Worked on information security fundamentals and cybersecurity practices; actively contributed as a proactive and disciplined team member.
 
 Education:
-- B.Tech CSE (AI & ML), Sharda University (Sept 2022–Present).
-- Intermediate CBSE, Gyan Sagar Public School, New Delhi, 80% (Apr 2021–Mar 2022).
-- Matriculation CBSE, Gyan Sagar Public School, New Delhi, 76% (Apr 2019–Mar 2020).
 
 Technical Skills: Python, SQL, Java, C, C++, JavaScript, HTML, CSS, React.js, Node.js, Express.js, MongoDB, Firebase, MySQL, REST APIs, Google Maps API, Gemini AI, Git, Postman, VS Code, MS Office.
 Soft Skills: Communication & presentation; client engagement; teamwork; decision making; market research; problem solving.
