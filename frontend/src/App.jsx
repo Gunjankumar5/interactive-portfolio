@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import profilePic from './profilePic/profile.jpeg'
 import ChatWidget from './components/ChatWidget'
+import PortfolioSections from './components/PortfolioSections'
+import HelpSection from './components/HelpSection'
 import './App.css'
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <p>Final Year B.Tech CSE AI&ML student with strong knowledge of HTML, CSS, and JavaScript, along with practical experience in React.js and Firebase projects. Built responsive, realtime web applications and implemented clean, scalable frontends. Eager to apply frontend development skills to build user-friendly, cross-browser compatible applications in a professional environment.</p>
       </section>
 
+      <PortfolioSections />
+
       <div className="card interactive">
         <button onClick={() => setCount((count) => count + 1)} className="btn">
           Click Count: {count}
@@ -27,6 +31,8 @@ function App() {
           Click the button to test interactivity
         </p>
       </div>
+
+      <HelpSection />
 
       <footer className="footer">
         <p>Let's connect and build something amazing together!</p>

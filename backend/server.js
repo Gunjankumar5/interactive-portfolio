@@ -179,6 +179,36 @@ app.get('/api/health', (_req, res) => {
   })
 })
 
+// Minimal contact/help endpoint to accept form submissions
+app.post('/api/help', async (req, res) => {
+  try {
+    const { name, email, subject, message } = req.body || {}
+    if (!name || !email || !subject || !message) {
+      return res.status(400).json({ error: 'All fields are required.' })
+    }
+
+    // If MongoDB is connected, optionally store submissions
+    if (mongoose.connection.readyState === 1) {
+      try {
+        const HelpSchema = new mongoose.Schema(
+          { name: String, email: String, subject: String, message: String },
+          { timestamps: true }
+        )
+        const HelpMsg = mongoose.models.HelpMsg || mongoose.model('HelpMsg', HelpSchema)
+        await HelpMsg.create({ name, email, subject, message })
+      } catch (dbErr) {
+        console.warn('[mongo] failed to save help message', dbErr?.message)
+      }
+    }
+
+    // Return success immediately
+    return res.json({ ok: true })
+  } catch (err) {
+    console.error('[ERROR] /api/help', err)
+    return res.status(500).json({ error: 'Failed to submit message.' })
+  }
+})
+
 app.get('/api/debug', (_req, res) => {
   res.json({
     timestamp: new Date().toISOString(),

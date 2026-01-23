@@ -30,3 +30,9 @@ lerna-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# API Keys
+AIzaSyC4w9h1J6MZXZwXMstLZuRxeMh-zHOnI-I
+
+# Debug URL
+https://interactive-portfolio-hr35.onrender.com/api/debug
