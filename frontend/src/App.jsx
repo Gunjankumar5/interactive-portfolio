@@ -6,8 +6,6 @@ import HelpSection from './components/HelpSection'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <header className="header">
@@ -22,15 +20,6 @@ function App() {
       </section>
 
       <PortfolioSections />
-
-      <div className="card interactive">
-        <button onClick={() => setCount((count) => count + 1)} className="btn">
-          Click Count: {count}
-        </button>
-        <p>
-          Click the button to test interactivity
-        </p>
-      </div>
 
       <HelpSection />
 
